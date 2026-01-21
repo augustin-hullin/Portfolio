@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Voilure jet d’affaires | Portfolio</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a href="./index.html" class="brand">
+      <div class="name">Augustin HULLIN</div>
+      <div class="tagline">
+        Elève ingénieur à l'ESTACA dans la filière aéronautique
+      </div>
+    </a>
+    <div class="menu">
+      <a href="./index.html">Accueil</a>
+      <a href="./projects/wing.html">Projets</a>
+      <a href="./contact.html">Contact</a>
+      <a class="btn primary" href="./Portfolio.pdf" target="_blank" rel="noopener">PDF ↗</a>
+      <button id="themeToggle" class="btn" aria-label="Changer de thème">🌙</button>
+    </div>
+  </nav>
+</header>
+
+<main class="container page">
+  <div class="breadcrumb">
+    <a href="../index.html">Accueil</a> → Projets → Voilure jet d’affaires
+  </div>
+
+  <h1>Architecture & prédimensionnement de voilure — Jet d’affaires</h1>
+  <p class="sub">
+    Méthodologie d'avant projet : analyse comparative → règles empiriques → logigramme → outil Excel,
+    pour passer d’une forme en plan à une voilure cohérente.
+  </p>
+
+  <div class="project-logo">
+    <img src="../assets/img/Logo_Dassault_Aviation_2020.svg" alt="Dassault Aviation" />
+  </div>
+
+  <div class="tags" style="margin:10px 0 14px;">
+    <span class="tag k-amont">Phase amont</span>
+    <span class="tag k-struct">Structures</span>
+    <span class="tag k-tools">Outils (Excel)</span>
+  </div>
+
+  <!-- TOP LAYOUT: left stack (skills + problem) / right image -->
+  <div class="grid top-row" style="margin-top:16px;">
+    <div class="col-6 stack">
+      <aside class="block">
+        <h2>Compétences mobilisées</h2>
+        <ul>
+          <li>Ingénierie système (architecture/structure/exploitation)</li>
+          <li>Analyse comparative & capitalisation REX</li>
+          <li>Formalisation méthodologique (logigramme)</li>
+          <li>Prédimensionnement (phase amont)</li>
+          <li>Mise en place d'un outil Excel</li>
+          <li>Esprit critique (limites explicites)</li>
+        </ul>
+      </aside>
+
+      <div class="block callout">
+        <h2>Problème</h2>
+        <p>
+          Comment générer une voilure techniquement crédible à partir d’une forme en plan, en intégrant dès l’amont
+          structure, systèmes, maintenance et contraintes d’exploitation, sans complexité inutile ?
+        </p>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="figure">
+        <img src="../assets/img/Voilure.png" alt="Architecture de voilure – jet d’affaires" />
+        <div class="cap">Architecture interne de la voilure – prédimensionnement et intégration structurelle.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DÉMARCHE -->
+  <div class="grid" style="margin-top:16px;">
+    <div class="project-card col-12 p1">
+      <h3>Démarche</h3>
+      <div class="meta">De l’existant vers une méthode exploitable</div>
+      <ul>
+        <li>Sélection d’un panel de jets d’affaires modernes (données publiques).</li>
+        <li>Analyse géométrique (plans 3 vues, écorchés) et extraction de tendances.</li>
+        <li>Formalisation d’un logigramme : ordre des décisions (longerons, nervures, train, gouvernes).</li>
+        <li>Implémentation progressive dans un outil Excel semi-automatisé.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- AUTRES PROJETS -->
+  <section class="related">
+    <div class="section-title">
+      <h2>Autres projets</h2>
+      <span class="hint">Navigation rapide</span>
+    </div>
+
+    <div class="grid">
+      <a href="./liner.html" class="project-link col-6">
+        <article class="project-card p2">
+          <h3>Liner grande capacité</h3>
+          <div class="meta">Architecture · compromis · masses · centrage</div>
+          <p>Conception préliminaire : cohérence globale et paramètres dimensionnants.</p>
+          <div class="tags">
+            <span class="tag k-amont">Phase amont</span>
+            <span class="tag k-archi">Architecture</span>
+            <span class="tag k-opti">Optimisation</span>
+          </div>
+        </article>
+      </a>
+
+      <a href="./pa18.html" class="project-link col-6">
+        <article class="project-card p3">
+          <h3>Allègement PA-18 iso-performance</h3>
+          <div class="meta">Rétro-ingénierie · CS-23 · RDM/MEF</div>
+          <p>Allègement sous contraintes : certification, chemins d’efforts, faisabilité.</p>
+          <div class="tags">
+            <span class="tag k-struct">Structures</span>
+            <span class="tag k-certif">Certification</span>
+            <span class="tag k-opti">Optimisation</span>
+          </div>
+        </article>
+      </a>
+
+      <a href="./sustainable.html" class="project-link col-6">
+        <article class="project-card p4">
+          <h3>Sustainable Aviation (Ops)</h3>
+          <div class="meta">CDO · 4D · AMAN · opérations au sol</div>
+          <p>Leviers opérationnels réalistes pour réduire carburant/émissions.</p>
+          <div class="tags">
+            <span class="tag k-ops">Exploitation</span>
+            <span class="tag k-amont">Phase amont</span>
+            <span class="tag k-opti">Optimisation</span>
+          </div>
+        </article>
+      </a>
+
+      <a href="./mro.html" class="project-link col-6">
+        <article class="project-card p5">
+          <h3>MRO / Maintenance – MVP</h3>
+          <div class="meta">Planification · KPI · scénarios · Python</div>
+          <p>Optimiser une planification : robustesse, évolutivité, aide à la décision.</p>
+          <div class="tags">
+            <span class="tag k-mro">Maintenance</span>
+            <span class="tag k-opti">Optimisation</span>
+            <span class="tag k-tools">Outils (Python)</span>
+          </div>
+        </article>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">
+      <div>© <span data-year></span> · Augustin HULLIN</div>
+      <div class="footer-school">
+        <img src="../assets/img/estaca_1280x720.jpg" alt="ESTACA" />
+        <span>Étudiant ingénieur – ESTACA</span>
+      </div>
+    </div>
+    <div>
+      <a href="./liner.html">Projet suivant →</a>
+    </div>
+  </div>
+</main>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

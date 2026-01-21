@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio | Augustin HULLIN</title>
+  <meta name="description" content="Portfolio d'ingénierie aéronautique – Augustin HULLIN (ESTACA)" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a href="./index.html" class="brand">
+      <div class="name">Augustin HULLIN</div>
+      <div class="tagline">
+        Elève ingénieur à l'ESTACA dans la filière aéronautique
+      </div>
+    </a>
+    <div class="menu">
+      <a href="./index.html">Accueil</a>
+      <a href="./projects/wing.html">Projets</a>
+      <a href="./contact.html">Contact</a>
+      <a class="btn primary" href="./Portfolio.pdf" target="_blank" rel="noopener">PDF ↗</a>
+      <button id="themeToggle" class="btn" aria-label="Changer de thème">🌙</button>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Portfolio</h1>
+    <p>
+      Étudiant en 4ᵉ année à l’ESTACA, je m’oriente vers l’ingénierie aéronautique avec un intérêt particulier pour la
+      <b>conception préliminaire</b>, l’<b>exploitation</b> et la <b>maintenance</b>.
+      Cette version web est une lecture rapide : la référence détaillée reste le PDF.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="./Portfolio.pdf" target="_blank" rel="noopener">Ouvrir le PDF ↗</a>
+      <a class="btn" href="./projects/wing.html">Commencer par le projet voilure →</a>
+    </div>
+  </section>
+
+  <!-- SYNTHÈSE -->
+  <div class="grid">
+    <div class="card col-12">
+      <div class="section-title">
+        <h2>À retenir</h2>
+        <span class="hint"></span>
+      </div>
+      <ul>
+        <li><b>Approche système</b> : architecture, structure, exploitation, maintenance.</li>
+        <li><b>Phase amont</b> : méthodologie, itérations, compromis justifiés.</li>
+        <li><b>Esprit critique</b> : limites explicites, solutions perfectibles.</li>
+        <li><b>Outils</b> : Excel avancé, Python (MVP MRO).</li>
+      </ul>
+      <p class="small">Recherche : stage assistant ingénieur (3 mois) – à partir de juillet 2026.</p>
+    </div>
+  </div>
+
+  <!-- PROJETS -->
+  <section style="margin-top:20px;">
+    <div class="section-title">
+      <h2>Projets</h2>
+      <span class="hint"></span>
+    </div>
+
+    <div class="grid">
+
+      <!-- Projet 1 -->
+      <a href="./projects/wing.html" class="project-link col-6">
+        <article class="project-card p1">
+          <h3>Voilure jet d’affaires</h3>
+          <div class="meta">Analyse de l’existant → logigramme → outil Excel</div>
+          <p>Méthode de prédimensionnement réaliste : structure, intégration, exploitation.</p>
+          <div class="tags">
+            <span class="tag k-amont">Phase amont</span>
+            <span class="tag k-struct">Structures</span>
+            <span class="tag k-tools">Outils (Excel)</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- Projet 2 -->
+      <a href="./projects/liner.html" class="project-link col-6">
+        <article class="project-card p2">
+          <h3>Liner grande capacité</h3>
+          <div class="meta">Architecture avion · compromis · masses · centrage</div>
+          <p>Conception préliminaire : cohérence globale et paramètres dimensionnants.</p>
+          <div class="tags">
+            <span class="tag k-amont">Phase amont</span>
+            <span class="tag k-archi">Architecture</span>
+            <span class="tag k-opti">Optimisation</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- Projet 3 -->
+      <a href="./projects/pa18.html" class="project-link col-6">
+        <article class="project-card p3">
+          <h3>Allègement PA-18 iso-performance</h3>
+          <div class="meta">Rétro-ingénierie · CS-23 · RDM/MEF</div>
+          <p>Allègement sous contraintes : certification, chemins d’efforts, faisabilité.</p>
+          <div class="tags">
+            <span class="tag k-struct">Structures</span>
+            <span class="tag k-certif">Certification</span>
+            <span class="tag k-opti">Optimisation</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- Projet 4 -->
+      <a href="./projects/sustainable.html" class="project-link col-6">
+        <article class="project-card p4">
+          <h3>Sustainable Aviation (Ops)</h3>
+          <div class="meta">CDO · 4D · AMAN · opérations au sol</div>
+          <p>Leviers opérationnels réalistes pour réduire carburant/émissions.</p>
+          <div class="tags">
+            <span class="tag k-ops">Exploitation</span>
+            <span class="tag k-amont">Phase amont</span>
+            <span class="tag k-opti">Optimisation</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- Projet 5 -->
+      <a href="./projects/mro.html" class="project-link col-12">
+        <article class="project-card p5">
+          <h3>MRO / Maintenance – MVP (projet perso)</h3>
+          <div class="meta">Planification · backlog · KPI · scénarios · Python</div>
+          <p>Optimiser une planification avec des données imparfaites : robustesse, évolutivité, aide à la décision.</p>
+          <div class="tags">
+            <span class="tag k-mro">Maintenance</span>
+            <span class="tag k-opti">Optimisation</span>
+            <span class="tag k-tools">Outils (Python)</span>
+          </div>
+        </article>
+      </a>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="footer-left">
+      <div>© <span data-year></span> · Augustin HULLIN</div>
+      <div class="footer-school">
+        <img src="./assets/img/estaca_1280x720.jpg" alt="ESTACA" />
+        <span>Étudiant ingénieur – ESTACA</span>
+      </div>
+    </div>
+    <div>
+      <a href="./contact.html">Contact</a> ·
+      <a href="./Portfolio.pdf" target="_blank" rel="noopener">PDF</a>
+    </div>
+  </div>
+
+</main>
+
+<script src="./js/main.js"></script>
+</body>
+</html>

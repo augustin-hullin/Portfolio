@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Allègement PA-18 | Portfolio</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a href="./index.html" class="brand">
+      <div class="name">Augustin HULLIN</div>
+      <div class="tagline">
+        Elève ingénieur à l'ESTACA dans la filière aéronautique
+      </div>
+    </a>
+    <div class="menu">
+      <a href="./index.html">Accueil</a>
+      <a href="./projects/wing.html">Projets</a>
+      <a href="./contact.html">Contact</a>
+      <a class="btn primary" href="./Portfolio.pdf" target="_blank" rel="noopener">PDF ↗</a>
+      <button id="themeToggle" class="btn" aria-label="Changer de thème">🌙</button>
+    </div>
+  </nav>
+</header>
+
+<main class="container page">
+  <div class="breadcrumb">
+    <a href="../index.html">Accueil</a> → Projets → Allègement PA-18
+  </div>
+
+  <h1>Allègement d’un PA-18 à iso-performance</h1>
+  <p class="sub">
+    Rétro-ingénierie et optimisation sous contraintes : conserver performances et conformité, tout en recherchant un compromis
+    réaliste masse / sécurité / coût (CS-23, RDM, MEF).
+  </p>
+
+  <div class="project-logo logo-sci">
+    <img src="../assets/img/SCI.jpg" alt="SCI Tech" />
+  </div>
+
+  <div class="tags" style="margin:10px 0 14px;">
+    <span class="tag k-struct">Structures</span>
+    <span class="tag k-certif">Certification</span>
+    <span class="tag k-opti">Optimisation</span>
+  </div>
+
+  <div class="grid top-row" style="margin-top:16px;">
+    <div class="col-6 stack">
+      <aside class="block">
+        <h2>Compétences mobilisées</h2>
+        <ul>
+          <li>Rétro-ingénierie</li>
+          <li>CS-23 / réglementation</li>
+          <li>RDM & éléments finis</li>
+          <li>Analyse critique des hypothèses</li>
+          <li>Compromis masse / sécurité / coût</li>
+        </ul>
+      </aside>
+
+      <div class="block callout">
+        <h2>Problème</h2>
+        <p>
+          Comment alléger un avion certifié en conservant performances et conformité réglementaire,
+          en s’appuyant sur des modèles simplifiés mais cohérents ?
+        </p>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="figure">
+        <img src="../assets/img/PA-18.jpg" alt="Piper L-21 (PA-18)" />
+        <div class="cap">
+          Piper L-21 (PA-18) — Source :
+          <a href="https://www.alat.fr/aeronefs-avions-avions-en-service-piper-l-21-presentation.html"
+             target="_blank" rel="noopener">ALAT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid" style="margin-top:16px;">
+    <div class="project-card col-12 p3">
+      <h3>Démarche</h3>
+      <div class="meta">Optimiser sans dégrader la conformité</div>
+      <ul>
+        <li>Compréhension de la structure existante et identification des zones dimensionnantes.</li>
+        <li>Définition des cas de charge (CS-23) et modélisation efforts/contraintes.</li>
+        <li>Étude comparative matériaux/géométries et vérification iso-performance.</li>
+        <li>Analyse critique : limites des hypothèses et sens physique des résultats.</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="related">
+    <div class="section-title">
+      <h2>Autres projets</h2>
+      <span class="hint">Navigation rapide</span>
+    </div>
+
+    <div class="grid">
+      <a href="./wing.html" class="project-link col-6">
+        <article class="project-card p1">
+          <h3>Voilure jet d’affaires</h3>
+          <div class="meta">Analyse de l’existant → logigramme → outil Excel</div>
+          <p>Méthode de prédimensionnement réaliste : structure, intégration, exploitation.</p>
+          <div class="tags">
+            <span class="tag k-amont">Phase amont</span>
+            <span class="tag k-struct">Structures</span>
+            <span class="tag k-tools">Outils (Excel)</span>
+          </div>
+        </article>
+      </a>
+
+      <a href="./liner.html" class="project-link col-6">
+        <article class="project-card p2">
+          <h3>Liner grande capacité</h3>
+          <div class="meta">Architecture · compromis · masses · centrage</div>
+          <p>Conception préliminaire : cohérence globale et paramètres dimensionnants.</p>
+          <div class="tags">
+            <span class="tag k-amont">Phase amont</span>
+            <span class="tag k-archi">Architecture</span>
+            <span class="tag k-opti">Optimisation</span>
+          </div>
+        </article>
+      </a>
+
+      <a href="./sustainable.html" class="project-link col-6">
+        <article class="project-card p4">
+          <h3>Sustainable Aviation (Ops)</h3>
+          <div class="meta">CDO · 4D · AMAN · opérations au sol</div>
+          <p>Leviers opérationnels réalistes pour réduire carburant/émissions.</p>
+          <div class="tags">
+            <span class="tag k-ops">Exploitation</span>
+            <span class="tag k-amont">Phase amont</span>
+            <span class="tag k-opti">Optimisation</span>
+          </div>
+        </article>
+      </a>
+
+      <a href="./mro.html" class="project-link col-6">
+        <article class="project-card p5">
+          <h3>MRO / Maintenance – MVP</h3>
+          <div class="meta">Planification · KPI · scénarios · Python</div>
+          <p>Optimiser une planification : robustesse, évolutivité, aide à la décision.</p>
+          <div class="tags">
+            <span class="tag k-mro">Maintenance</span>
+            <span class="tag k-opti">Optimisation</span>
+            <span class="tag k-tools">Outils (Python)</span>
+          </div>
+        </article>
+      </a>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="footer-left">
+      <div>© <span data-year></span> · Augustin HULLIN</div>
+      <div class="footer-school">
+        <img src="../assets/img/estaca_1280x720.jpg" alt="ESTACA" />
+        <span>Étudiant ingénieur – ESTACA</span>
+      </div>
+    </div>
+    <div>
+      <a href="./liner.html">← Projet précédent</a> ·
+      <a href="./sustainable.html">Projet suivant →</a>
+    </div>
+  </div>
+</main>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

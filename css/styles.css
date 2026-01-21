@@ -1,0 +1,745 @@
+:root{
+  --bg:#ffffff;
+  --text:#0b1220;         /* plus “navy” */
+  --muted:#5b667a;        /* gris bleuté */
+  --line:#e6ebf3;         /* séparation froide */
+  --panel:#f6f8fc;        /* fond cartes */
+  --accent:#005EB8;       /* Airbus-like blue */
+  --accent2:#003B7A;      /* navy */
+  --radius:14px;
+  --max:1060px;
+  --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--sans);
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.65;
+}
+
+a{color:inherit}
+a:hover{ color: var(--accent); }
+img{max-width:100%; height:auto; display:block}
+
+.container{max-width:var(--max); margin:0 auto; padding:28px 18px}
+
+header{
+  border-bottom:1px solid var(--line);
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.nav{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:14px 18px;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  min-width:220px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.brand:hover{
+  opacity: 0.9;
+}
+
+.brand .name{
+  font-weight:800;
+  letter-spacing:-0.2px;
+}
+.brand .tagline{
+  font-size:13px;
+  color:var(--muted);
+}
+
+.menu{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  justify-content:flex-end;
+}
+
+.menu a{
+  text-decoration:none;
+  font-size:13px;
+  color:var(--muted);
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid transparent;
+}
+.menu a:hover{
+  color:var(--accent2);
+  border-color:var(--line);
+  background:var(--panel);
+}
+
+.menu a.active{
+  color:var(--accent2);
+  border-color:var(--line);
+  background:var(--panel);
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  font-weight:650;
+  font-size:13px;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:#fff;
+}
+
+.btn:hover{
+  background:var(--panel);
+  border-color:#d7deea;
+}
+
+.btn.primary{
+  color:#fff;
+  border-color:transparent;
+  background: linear-gradient(180deg, #0A66C2, var(--accent));
+  box-shadow: 0 6px 18px rgba(0,94,184,.18);
+}
+
+.btn.primary:hover{
+  background: linear-gradient(180deg, #0A66C2, #004C99);
+  box-shadow: 0 8px 22px rgba(0,94,184,.22);
+}
+
+.hero{
+  padding:26px 0 10px;
+}
+.hero h1{
+  margin:0 0 8px;
+  font-size:36px;
+  line-height:1.15;
+  letter-spacing:-0.6px;
+}
+.hero p{
+  margin:0;
+  color:var(--muted);
+  max-width:80ch;
+}
+.hero .actions{
+  margin-top:14px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(12, 1fr);
+  gap:16px;
+  margin-top:18px;
+}
+.col-8{grid-column:span 8}
+.col-4{grid-column:span 4}
+.col-6{grid-column:span 6}
+.col-12{grid-column:span 12}
+@media (max-width: 900px){
+  .col-8,.col-4,.col-6{grid-column:span 12}
+  .brand{min-width:auto}
+}
+
+.card{
+  border:1px solid var(--line);
+  background:var(--panel);
+  border-radius:var(--radius);
+  padding:16px;
+}
+
+.kpi{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:8px;
+}
+.kpi .row{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:12px;
+  background:#fff;
+  border:1px solid var(--line);
+}
+.kpi .label{font-size:12px; color:var(--muted)}
+.kpi .value{font-weight:800}
+
+.section-title{
+  margin-top:10px;
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+}
+.section-title h2{
+  margin:0;
+  font-size:18px;
+}
+.section-title .hint{
+  font-size:12px;
+  color:var(--muted);
+}
+
+.project-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:16px;
+}
+.project-card h3{
+  margin:0 0 6px;
+  font-size:16px;
+  letter-spacing:-.2px;
+}
+.project-card .meta{
+  font-size:12px;
+  color:var(--muted);
+}
+.project-card p{
+  margin:10px 0 0;
+  color:var(--text);
+}
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:12px;
+}
+.tag{
+  font-size:11px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:var(--panel);
+  color:var(--text);
+}
+
+.page{
+  padding:18px 0 8px;
+}
+.breadcrumb{
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:10px;
+}
+.breadcrumb a{color:var(--muted); text-decoration:none}
+.breadcrumb a:hover{text-decoration:underline}
+
+.page h1{
+  margin:0 0 6px;
+  font-size:28px;
+  letter-spacing:-.4px;
+}
+.page .sub{
+  margin:0 0 14px;
+  color:var(--muted);
+  max-width:85ch;
+}
+
+.content{
+  display:grid;
+  grid-template-columns: 1.4fr .9fr;
+  gap:16px;
+}
+@media (max-width: 900px){
+  .content{grid-template-columns:1fr}
+}
+
+.block{
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:var(--radius);
+  padding:16px;
+}
+.block h2{
+  margin:0 0 10px;
+  font-size:15px;
+  letter-spacing:-.2px;
+}
+.block p{margin:0; color:var(--text)}
+.block ul{margin:10px 0 0; padding-left:18px}
+.block li{margin:6px 0}
+
+.callout{
+  border-left:4px solid var(--accent);
+  background: linear-gradient(90deg, rgba(0,94,184,.08), rgba(0,94,184,.02));
+}
+
+.figure{
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.figure .cap{
+  padding:10px 12px;
+  font-size:12px;
+  color:var(--muted);
+  border-top:1px solid var(--line);
+}
+
+.footer{
+  border-top:1px solid var(--line);
+  margin-top:26px;
+  padding:18px 0 26px;
+  color:var(--muted);
+  font-size:12px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:space-between;
+}
+.small{font-size:12px; color:var(--muted)}
+hr{border:0; border-top:1px solid var(--line); margin:16px 0}
+
+.project-card h3 a{
+  text-decoration:none;
+}
+.project-card h3 a:hover{
+  text-decoration:underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* ========== COLORS: 1 project = 1 accent (pale) ========== */
+
+/* Base project card accent bar */
+.project-card{
+  position:relative;
+  border:1px solid var(--line);
+  background:#fff;
+  box-shadow: 0 1px 0 rgba(11,18,32,.03);
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.project-card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(0,94,184,.22);
+  box-shadow: 0 10px 26px rgba(11,18,32,.08);
+}
+.project-card::before{
+  content:"";
+  position:absolute;
+  left:0; top:14px; bottom:14px;
+  width:4px;
+  border-radius:999px;
+  background: rgba(0,94,184,.18); /* fallback */
+}
+
+/* One pale accent per project */
+.project-card.p1::before{ background: rgba(0,94,184,.26); }   /* blue */
+.project-card.p2::before{ background: rgba(219,39,119,.22); } /* rose */
+.project-card.p3::before{ background: rgba(55,48,163,.20); }  /* indigo */
+.project-card.p4::before{ background: rgba(14,116,144,.20); } /* teal */
+.project-card.p5::before{ background: rgba(245,158,11,.18); } /* amber */
+
+
+/* ========== TAGS: 1 keyword = 1 color (pale) ========== */
+
+.tag{
+  font-size:11px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid #dbe3f1;
+  background:#f6f8fc;
+  color:#0b1220;
+}
+
+/* Keyword palette (pale, stable) */
+.tag.k-amont{ background: rgba(0,94,184,.08); border-color: rgba(0,94,184,.18); }
+.tag.k-archi{ background: rgba(29,78,216,.08); border-color: rgba(29,78,216,.18); }
+.tag.k-struct{ background: rgba(55,48,163,.08); border-color: rgba(55,48,163,.18); }
+.tag.k-certif{ background: rgba(220,38,38,.06); border-color: rgba(220,38,38,.16); }
+.tag.k-ops{ background: rgba(14,116,144,.08); border-color: rgba(14,116,144,.18); }
+.tag.k-mro{ background: rgba(245,158,11,.10); border-color: rgba(245,158,11,.22); }
+.tag.k-opti{ background: rgba(34,197,94,.08); border-color: rgba(34,197,94,.18); }
+.tag.k-tools{ background: rgba(15,23,42,.06); border-color: rgba(15,23,42,.14); }
+
+/* ========== CLICKABLE PROJECT CARDS ========== */
+
+.project-link{
+  display:block;
+  text-decoration:none;
+  color:inherit;
+}
+.project-link:hover{ text-decoration:none; }
+
+/* Ensure hover works on the whole card */
+.project-link .project-card{
+  cursor:pointer;
+}
+
+/* ========== PROJECT CARDS HEIGHT BALANCE ========== */
+
+.project-card{
+  min-height: 200px;   /* ajuste si besoin : 340–380 */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .tags{
+  margin-top: auto;
+}
+
+/* ========== DARK MODE ========== */
+
+html.dark{
+  --bg:#0b1220;
+  --text:#e5e7eb;
+  --muted:#9aa4b2;
+  --line:#1f2937;
+  --panel:#111827;
+
+  --accent:#60a5fa;   /* bleu doux */
+  --accent2:#93c5fd;
+}
+
+/* cards & blocks in dark */
+html.dark .card,
+html.dark .project-card,
+html.dark .block,
+html.dark .figure{
+  background: var(--panel);
+  border-color: var(--line);
+}
+
+/* tags */
+html.dark .tag{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.14);
+  color: var(--text);
+}
+
+/* footer */
+html.dark .footer{
+  border-color: var(--line);
+}
+
+/* hover adjustments */
+html.dark .project-card:hover{
+  box-shadow: 0 10px 28px rgba(0,0,0,.6);
+}
+
+/* ========== DARK MODE FIXES (navbar + pills + KPI rows) ========== */
+
+html.dark header{
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+html.dark .nav{
+  background: transparent;
+}
+
+html.dark .menu a{
+  color: var(--muted);
+  border-color: transparent;
+  background: transparent;
+}
+
+html.dark .menu a:hover{
+  color: var(--text);
+  border-color: var(--line);
+  background: rgba(255,255,255,.04);
+}
+
+html.dark .menu a.active{
+  color: var(--text);
+  border-color: var(--line);
+  background: rgba(255,255,255,.06);
+}
+
+/* Buttons in dark */
+html.dark .btn{
+  background: rgba(255,255,255,.04);
+  border-color: rgba(255,255,255,.12);
+  color: var(--text);
+}
+
+html.dark .btn:hover{
+  background: rgba(255,255,255,.07);
+  border-color: rgba(255,255,255,.18);
+}
+
+/* Primary button stays “blue” but tuned for dark */
+html.dark .btn.primary{
+  color:#fff;
+  background: linear-gradient(180deg, #0A66C2, #005EB8);
+  border-color: transparent;
+  box-shadow: 0 10px 28px rgba(0,0,0,.45);
+}
+
+html.dark .btn.primary:hover{
+  background: linear-gradient(180deg, #0A66C2, #004C99);
+}
+
+/* KPI rows (Infos panel) */
+html.dark .kpi .row{
+  background: rgba(255,255,255,.04);
+  border-color: rgba(255,255,255,.12);
+}
+
+html.dark .kpi .label{ color: var(--muted); }
+html.dark .kpi .value{ color: var(--text); }
+
+/* Make sure “cards” never stay white */
+html.dark .project-card,
+html.dark .block,
+html.dark .card,
+html.dark .figure{
+  background: rgba(255,255,255,.03);
+}
+
+/* Optional: soften section backgrounds if any */
+html.dark .projects-surface{
+  background: linear-gradient(180deg, rgba(96,165,250,.06), rgba(96,165,250,.00));
+}
+
+/* ========== RELATED PROJECTS (BOTTOM NAV) ========== */
+
+.related{
+  margin-top: 18px;
+}
+
+.related .section-title{
+  margin-top: 0;
+}
+
+.related .project-link{
+  height: 100%;
+}
+
+.related .project-card{
+  min-height: 190px; /* plus compact que la grille de la home */
+}
+
+/* Make sure tags stay at bottom even in small cards */
+.related .project-card .tags{
+  margin-top: auto;
+}
+
+/* ========== FOOTER SCHOOL LOGO ========== */
+
+.footer-school{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:8px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+.footer-school img{
+  height:32px;            /* ⬅️ plus grand */
+  width:auto;
+  opacity:.9;
+  filter: grayscale(100%);
+}
+
+html.dark .footer-school img{
+  filter: grayscale(100%) brightness(1.15);
+}
+
+/* ========== PROJECT LOGOS ========== */
+
+.project-logo{
+  display:flex;
+  justify-content:flex-end;
+  margin: 6px 0 10px;
+}
+
+.project-logo img{
+  height:36px;
+  width:auto;
+  opacity:.9;
+}
+
+html.dark .project-logo img{
+  filter: brightness(1.1);
+}
+
+/* ========== PROJECT LOGO OVERRIDES ========== */
+
+/* SCI logo slightly larger */
+.logo-sci img{
+  height:60px; 
+  width:56;  /* ajuste si besoin : 48–60 */
+}
+
+/* ========== PROJECT FIGURES ========== */
+
+.figure{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.figure img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.figure .cap{
+  padding:8px 12px;
+  font-size:12px;
+  color:var(--muted);
+  border-top:1px solid var(--line);
+}
+
+html.dark .figure{
+  background: rgba(255,255,255,.03);
+}
+
+/* ========== PROJECT TOP LAYOUT (skills + callout vs image) ========== */
+
+.stack{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.figure{ height:100%; }
+.figure img{ object-fit: cover; }
+
+@media (max-width: 900px){
+  .figure img{ object-fit: contain; }
+}
+
+/* Smaller callout inside the top layout */
+.stack .callout{
+  padding: 12px 14px;
+}
+
+.stack .callout h2{
+  margin-bottom: 6px;
+}
+
+/* ========== TOP ROW HEIGHT BALANCING ========== */
+
+/* The top grid row: make children stretch to same height */
+.top-row{
+  align-items: stretch;
+}
+
+/* Left column takes full height and distributes content */
+.top-row .stack{
+  height: 100%;
+}
+
+/* Make the figure behave like a full-height card */
+.top-row .figure{
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+}
+
+/* Let the image fill available height and keep ratio */
+.top-row .figure img{
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* change to cover if you prefer */
+  background: rgba(0,0,0,.03);
+}
+
+html.dark .top-row .figure img{
+  background: rgba(255,255,255,.03);
+}
+
+/* Compact caption (legend) */
+.figure .cap{
+  padding: 6px 10px;     /* smaller */
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+/* ===== Step-by-step: equal height for top section (liner + others) ===== */
+
+.top-row{
+  align-items: stretch;
+  min-height: 460px; /* ajuste ici: 380 / 420 / 460 selon ton goût */
+}
+
+.top-row .col-6{
+  height: 100%;
+}
+
+/* Left column: stack fills the height */
+.top-row .stack{
+  height: 100%;
+}
+
+/* Right column: figure fills the height */
+.top-row .figure{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image area takes remaining height */
+.top-row .figure img{
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* pas de crop */
+  background: rgba(0,0,0,.03);
+}
+html.dark .top-row .figure img{ background: rgba(255,255,255,.03); }
+
+/* Caption stays compact */
+.top-row .figure .cap{
+  padding: 6px 10px;
+  line-height: 1.25;
+}
+
+/* ===== 75% Compétences / 25% Problème ===== */
+
+.top-row .stack{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Compétences = 3 parts */
+.top-row .stack .block:first-child{
+  flex: 3 1 0;
+}
+
+/* Problème = 1 part */
+.top-row .stack .callout{
+  flex: 1 1 0;
+}
+
+.top-row .stack .block ul{
+  margin-bottom: 0;
+}
+
+.top-row .stack .callout{
+  padding: 14px 16px;
+}
